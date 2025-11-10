@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boutique MAKO</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+    
+    .col-3 {
+        font-size: 0.75cm;
+    }
+    
+    .text-light {
+        text-decoration: none;
+    }
+    
+    h1 {
+        font-size: 1cm;
+        color: white;
+        margin: 25px;
+    }
+    
+    p {
+        color: white;
+    }
+    
+    header {
+        margin: 25px;
+    }
+    /* Conteneur de chaque story */
+    
+    .row .col-3 {
+        overflow: hidden;
+        /* Empêche l'image de dépasser */
+        cursor: pointer;
+        /* Curseur qui indique qu’on peut cliquer/survoler */
+        transition: transform 0.5s ease;
+        /* Zoom fluide pour tout le div */
+        text-align: center;
+    }
+    /* Image responsive qui remplit son conteneur */
+    
+    .row .col-3 img {
+        width: 100%;
+        height: 50vh;
+        /* Hauteur fixe pour uniformiser */
+        object-fit: cover;
+        /* Remplit le conteneur sans déformation */
+        transition: transform 0.5s ease;
+        /* Zoom fluide sur l'image */
+    }
+    /* Légende sous l'image */
+    
+    .row .col-3 p {
+        margin-top: 10px;
+        transition: transform 0.5s ease, font-size 0.5s ease;
+        /* animation de la légende */
+    }
+    /* Effet hover : zoom container + image + légende */
+    
+    .row .col-3:hover {
+        transform: scale(1.1);
+        /* Agrandit le conteneur */
+    }
+    
+    .row .col-3:hover p {
+        font-size: 1.1rem;
+        /* Agrandit légèrement la légende */
+    }
+    /* Pour activer le défilement horizontal uniquement sur petit écran */
+    
+    @media (max-width: 768px) {
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            gap: 1rem;
+            padding: 1rem;
+        }
+        .scroll-item {
+            flex: 0 0 80%;
+            /* chaque bloc prend 80% de la largeur */
+            scroll-snap-align: center;
+            text-align: center;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <div class="container-fluid text-light">
+            <div class="row ">
+                <div class="col-3 -">CHOUB CHOUB MAKO</div>
+                <div class="col-2"></div>
+                <div class="col-1  rounded  m-3">
+                    <a href="#Aceuil " class="text-light">Accueil</a>
+                </div>
+                <div class="col-1 rounded m-3">
+                    <a href="#produit " class="text-light">Produits</a>
+                </div>
+                <div class="col-1  rounded  m-3 ">
+                    <a href="#contact " class="text-light">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="Aceuil">
+        <center>
+            <h1>FASHION FOR <br>THE MODERN </h1>
+            <p>Discover the lastest trends in fashion.</p>
+        </center>
+    </div>
+
+    <section id="produit">
+        <h2 class="ms-3 text-light">FEATURED PRODUCTS</h2>
+        <div class="container-fluid ">
+            <div class="row scroll-container">
+                <div class="col-3 scroll-item">
+                    <img src="image/OIP.webp" class="img-fluid border rounded" alt="Story 1">
+                    <p>"Les meilleurs ventes sont ici .<br>Découvrez-les maintenant !"</p>
+                </div>
+                <div class="col-3 scroll-item">
+                    <img src="image/zabir.jpg" alt="story 4" class="img-fluid border rounded">
+                    <p>Prix cassés,qualité garantie <br>C'est le moment de faire des affaires !</p>
+                </div>
+                <div class="col-3 scroll-item">
+                    <img src="image/chaussure1.jpeg" alt="Story 3" class="img-fluid border rounded">
+                    <p>Parceque vous méritez ce <br>qu'il y a de mieux !</p>
+                </div>
+                <div class="col-3 scroll-item">
+                    <img src="image/swag.jpg" alt="Story 2" class="img-fluid border rounded">
+                    <p>"Votre Satisfaction notre Priorité !"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <section id="contact">
+            <center>
+                <h2 class="text-light">CONTACT</h2>
+                <p>contactez-nous !!!</p>
+                <div class="d-flex justify-content-center gap-4 mt-4">
+
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/choub.choub.mako?locale=fr_FR" target="_blank" class="text-decoration-none">
+                        <i class="bi bi-facebook" style="font-size: 2rem; color: #1877f2;"></i>
+                    </a>
+
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/2290161842838" target="_blank" class="text-decoration-none">
+                        <i class="bi bi-whatsapp" style="font-size: 2rem; color: #25D366;"></i>
+                    </a>
+
+                    <!-- Gmail -->
+                    <a href="mailto:choubaneseïbou@icloud.com" class="text-decoration-none">
+                        <i class="bi bi-envelope-fill" style="font-size: 2rem; color: #ea4335;"></i>
+                    </a>
+                </div>
+            </center>
+
+
+
+
+        </section>
+    </footer>
+</body>
+
+</html>
